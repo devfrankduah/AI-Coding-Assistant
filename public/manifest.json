@@ -1,0 +1,39 @@
+{
+  "manifest_version": 3,
+  "name": "AI Coding Assistant",
+  "version": "1.0.0",
+  "description": "AI-powered coding assistant for LeetCode and Exercism",
+  "permissions": [
+    "activeTab",
+    "storage",
+    "scripting"
+  ],
+  "host_permissions": [
+    "https://leetcode.com/*",
+    "https://exercism.org/*"
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "icons/icon16.png",
+      "48": "icons/icon48.png",
+      "128": "icons/icon128.png"
+    }
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://leetcode.com/problems/*",
+        "https://exercism.org/tracks/*/exercises/*"
+      ],
+      "js": ["content.js"]
+    }
+  ],
+  "web_accessible_resources": [{
+    "resources": ["solution.html"],
+    "matches": ["<all_urls>"]
+  }]
+} 
