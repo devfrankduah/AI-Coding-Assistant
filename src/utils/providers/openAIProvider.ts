@@ -26,7 +26,7 @@ export class OpenAIProvider implements AIProvider {
           }
         ]
       });
-
+      console.log(response);
       return response.choices[0].message.content || '';
     } catch (error) {
       console.error('OpenAI Error:', error);
