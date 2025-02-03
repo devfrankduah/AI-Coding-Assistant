@@ -18,7 +18,7 @@ export class OpenAIProvider implements AIProvider {
         messages: [
           {
             role: 'system',
-            content: 'You are a helpful coding tutor. Provide clear, educational responses with examples.'
+            content: 'You are a helpful coding tutor and assistant. Provide clear, educational responses with examples.'
           },
           {
             role: 'user',
