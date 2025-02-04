@@ -340,7 +340,7 @@ class ContentScript {
         document.querySelector('[data-cy="question-title"]')?.textContent || "",
       description: selectedText,
       platform: "leetcode",
-      language: selectedLanguage, // Ensure this is the selected language
+      language: selectedLanguage,
     };
 
     chrome.runtime.sendMessage(
