@@ -18,7 +18,7 @@ export class OpenAIProvider implements AIProvider {
         messages: [
           {
             role: 'system',
-            content: 'You are a helpful coding tutor. Provide clear, educational responses with examples.'
+            content: 'You are a helpful coding tutor and assistant. Provide clear, educational responses with examples.'
           },
           {
             role: 'user',
@@ -26,7 +26,7 @@ export class OpenAIProvider implements AIProvider {
           }
         ]
       });
-
+      console.log(response);
       return response.choices[0].message.content || '';
     } catch (error) {
       console.error('OpenAI Error:', error);

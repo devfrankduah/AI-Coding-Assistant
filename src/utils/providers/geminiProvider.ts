@@ -15,7 +15,7 @@ export class GeminiProvider implements AIProvider {
       const result = await model.generateContent(prompt);
       return result.response.text();
     } catch (error) {
-      console.error('Gemini Error:', error);
+      console.log('Gemini Error:', error);
       throw new Error('Failed to get assistance from Gemini');
     }
   }

@@ -28,7 +28,7 @@ class ContentScript {
       this.updateTheme(e.matches);
     };
     mediaQuery.addListener(handleThemeChange);
-    handleThemeChange(mediaQuery); // Initial theme
+    handleThemeChange(mediaQuery);
   }
 
   private updateTheme(isDark: boolean): void {
@@ -340,7 +340,7 @@ class ContentScript {
         document.querySelector('[data-cy="question-title"]')?.textContent || "",
       description: selectedText,
       platform: "leetcode",
-      language: selectedLanguage, // Ensure this is the selected language
+      language: selectedLanguage,
     };
 
     chrome.runtime.sendMessage(
