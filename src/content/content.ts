@@ -28,7 +28,7 @@ class ContentScript {
       this.updateTheme(e.matches);
     };
     mediaQuery.addListener(handleThemeChange);
-    handleThemeChange(mediaQuery); // Initial theme
+    handleThemeChange(mediaQuery);
   }
 
   private updateTheme(isDark: boolean): void {
