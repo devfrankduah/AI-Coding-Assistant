@@ -16,7 +16,7 @@ export class AIService {
       const response = await provider.getAssistance(prompt);
       return this.parseAIResponse(response);
     } catch (error) {
-      console.error("AI Service Error:", error);
+      console.log("AI Service Error:", error);
       throw new Error("Failed to get AI assistance");
     }
   }
